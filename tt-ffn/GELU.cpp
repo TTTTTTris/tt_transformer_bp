@@ -4,12 +4,14 @@
 #include <math.h>
 
 void gelu(float* data, int size) {
+	Loop_gelu:
     for (int i = 0; i < size; i++) {
         data[i] = 0.5f * data[i] * (1.0f + tanhf(sqrtf(2.0f / M_PI) * (data[i] + 0.044715f * powf(data[i], 3))));
     }
 }
 
 void gelu_derivative(float* data, float*output, int size) {
+	Loop_dgelu:
     for (int i = 0; i < size; i++) {
         float cdf = 0.5f * (1.0f + tanhf(sqrtf(2.0f / M_PI) * (data[i] + 0.044715f * powf(data[i], 3))));
         float pdf = (sqrtf(2.0f / M_PI) * (data[i] + 0.044715f * powf(data[i], 3)) +

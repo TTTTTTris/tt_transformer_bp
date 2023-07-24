@@ -4,8 +4,7 @@
 
 #include "defines.h"
 
-void LayerNorm(float* input, float* output, const float* scale, const float* bias, int numElements);
-void LayerNorm_derivative(float* input, float* output, const float* scale, const float* bias, int N, int numElements);
+void LayerNorm_derivative(float* input, float* grad_in, float* grad_out, const float* layernorm_w, const float* bias, int N);
 
 
 

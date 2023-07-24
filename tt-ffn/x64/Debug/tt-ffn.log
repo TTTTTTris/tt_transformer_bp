@@ -1,2 +1,26 @@
 ﻿  order_control.cpp
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(112,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(113,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(114,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(115,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(116,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(117,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(118,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(119,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(120,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(121,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(139,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(148,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(149,68): warning C4305: “参数”: 从“double”到“float”截断
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(161,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(177,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(178,51): warning C4305: “参数”: 从“double”到“float”截断
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(179,38): warning C4305: “参数”: 从“double”到“float”截断
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(123,13): warning C4102: “Loop_seq”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(137,14): warning C4102: “Loop_B1_I”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(140,18): warning C4102: “Loop_B1_J”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(146,11): warning C4102: “Loop_gelu”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(159,14): warning C4102: “Loop_B2_I”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(162,18): warning C4102: “Loop_B2_J”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\tt-ffn\order_control.cpp(175,12): warning C4102: “Loop_dgelu”: 未引用的标签
   tt-ffn.vcxproj -> D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt-ffn\x64\Debug\tt-ffn.exe

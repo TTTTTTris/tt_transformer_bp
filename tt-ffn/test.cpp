@@ -5,11 +5,10 @@
 #include <string>
 using namespace std;
 
-extern float input[12 * 8 * 8 * Batchsize * seq_len];
-extern float grad_output[12 * 8 * 8 * Batchsize * seq_len];
+float input[12 * 8 * 8 * Batchsize * seq_len];
+float grad_output[12 * 8 * 8 * Batchsize * seq_len];
 struct S0_type { float* x; };
 
-//template<typename T> //template function
 void load_file(float* data, const char* filename, int size) {
 	ifstream file;
 	file.open(filename);
@@ -18,14 +17,6 @@ void load_file(float* data, const char* filename, int size) {
 		file >> data[i];
 	}
 	file.close();
-	//float* buffer = new float[size];
-	//FILE* f = fopen(filename, "rb");
-	//fread((void*)buffer, sizeof(float), size, f);
-	//fclose(f);
-	//for (int i = 0; i < size; i++) {
-	//	data[i] = T(buffer[i]);
-	//}
-	//delete[]buffer;
 }
 
 int main() {
@@ -51,7 +42,7 @@ int main() {
 	}
 
 	load_file(input, "paras/FFN_input1.txt", 12 * 8 * 8 * Batchsize * seq_len);
-	load_file(grad_output, "paras/ffn_out_grad.txt", 12 * 8 * 8 * Batchsize * seq_len);
+	load_file(grad_output, "paras/FFN_out_grad.txt", 12 * 8 * 8 * Batchsize * seq_len);
 	load_file(bias_ff1, "paras/bias0.txt", 12 * 16 * 16);
 	load_file(bias_ff2, "paras/bias1.txt", 12 * 8 * 8);
 	load_file(layernorm_w, "paras/ln0.txt", 12 * 8 * 8);
@@ -69,7 +60,7 @@ int main() {
 
 	// order_control_tt_grad(tt_cores_ff1, tt_ranks, pff_shape[0], input, grad_output, grad_cores_ff1);
 	// order_control_tt_grad(tt_cores_ff2, tt_ranks, pff_shape[1], input, grad_output, grad_cores);
-	order_control(tt_cores_ff1, tt_cores_ff2, bias_ff1, bias_ff2, layernorm_w, layernorm_b, tt_ranks, pff_shape[0], pff_shape[1],grad_cores_1, grad_cores_2);
+	order_control_top(tt_cores_ff1, tt_cores_ff2, bias_ff1, bias_ff2, layernorm_w, layernorm_b, tt_ranks, pff_shape[0], pff_shape[1],grad_cores_1, grad_cores_2);
 
 	FILE* file1;
 	fopen_s(&file1, "grad_cores1.txt", "w");
