@@ -1,12 +1,38 @@
-﻿  contract.cpp
-  fc_bwd.cpp
-  order_control.cpp
-  test.cpp
-C:\Users\22642\Desktop\TT-MutiFPGA\tranformer-bwd\tranformer-bwd\test.cpp(7,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\22642\Desktop\TT-MutiFPGA\tranformer-bwd\tranformer-bwd\test.cpp(25): message : 查看对正在编译的函数 模板 实例化“void load_file<float>(T *,const char *,int)”的引用
-          with
-          [
-              T=float
-          ]
-  正在生成代码...
-  tranformer-bwd.vcxproj -> C:\Users\22642\Desktop\TT-MutiFPGA\tranformer-bwd\x64\Debug\tranformer-bwd.exe
+﻿  order_control.cpp
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(139,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(140,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(141,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(142,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(143,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(144,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(146,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(147,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(148,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(149,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(150,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(152,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(153,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(154,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(155,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(156,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(157,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(158,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(159,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(160,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(161,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(180,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(196,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(212,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(242,9): warning C4068: 未知的杂注“HLS”
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(164,13): warning C4102: “Loop_seq”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(178,10): warning C4102: “Loop_Bq_I”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(181,19): warning C4102: “Loop_Bq_J”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(194,10): warning C4102: “Loop_Bk_I”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(197,18): warning C4102: “Loop_Bk_J”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(210,10): warning C4102: “Loop_Bv_I”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(213,19): warning C4102: “Loop_Bv_J”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(220,17): warning C4102: “Loop_softmax”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(240,10): warning C4102: “Loop_Bo_I”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(243,19): warning C4102: “Loop_Bo_J”: 未引用的标签
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\tranformer-bwd\order_control.cpp(280,12): warning C4102: “Loop_matmul”: 未引用的标签
+  tranformer-bwd.vcxproj -> D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_enc\x64\Debug\tranformer-bwd.exe

@@ -21,24 +21,51 @@
     <ClCompile Include="order_control.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="layernorm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="softmax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="contract.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="transpose.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="clear.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="fc_bwd.h">
+    <ClInclude Include="defines.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="order_control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="layernorm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="softmax.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="contract.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="defines.h">
+    <ClInclude Include="transpose.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="order_control.h">
+    <ClInclude Include="clear.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
