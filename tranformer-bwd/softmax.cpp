@@ -13,6 +13,7 @@ Loop_sum_I:
 #pragma HLS loop_tripcount max=seq_len
             Loop_sum_K:
             for (int k = 0; k < K; ++k) {
+#pragma HLS loop_flatten off
 #pragma HLS loop_tripcount max=seq_len
                 int index = i * seq_len * seq_len + j * seq_len + k;
                 sum[i * seq_len + j] += exp(input[index]);

@@ -19,8 +19,8 @@ void contract(
     int I,
     int J,
     int K,
-    int L
-    //const int R
+    int L,
+    int R
 );
 
 void contract_left(

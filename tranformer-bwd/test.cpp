@@ -12,6 +12,10 @@ TYPE_WEIGHT tt_cores_attnq[num_cores * WD]{ 0 };
 TYPE_WEIGHT tt_cores_attnk[num_cores * WD]{ 0 };
 TYPE_WEIGHT tt_cores_attnv[num_cores * WD]{ 0 };
 TYPE_WEIGHT tt_cores_attnfc[num_cores * WD]{ 0 };
+TYPE_WEIGHT grad_cores_attnq[num_cores * WD]{ 0 };
+TYPE_WEIGHT grad_cores_attnk[num_cores * WD]{ 0 };
+TYPE_WEIGHT grad_cores_attnv[num_cores * WD]{ 0 };
+TYPE_WEIGHT grad_cores_attnfc[num_cores * WD]{ 0 };
 
 void load_file(float* data, const char* filename, int size) {
 	ifstream file;
@@ -38,10 +42,6 @@ int main() {
 	TYPE_WEIGHT bias_o[12 * 8 * 8]{ 0 };
 	TYPE_WEIGHT layernorm_w[12 * 8 * 8]{ 0 };
 	TYPE_WEIGHT layernorm_b[12 * 8 * 8]{ 0 };
-	TYPE_WEIGHT grad_cores_attnq[num_cores * WD]{ 0 };
-	TYPE_WEIGHT grad_cores_attnk[num_cores * WD]{ 0 };
-	TYPE_WEIGHT grad_cores_attnv[num_cores * WD]{ 0 };
-	TYPE_WEIGHT grad_cores_attnfc[num_cores * WD]{ 0 };
 
 	/* Define ATTN Layers Core Shape */
 	int attn_core_shape[6];
@@ -77,11 +77,10 @@ int main() {
 	
 	/* Train ATTN Layers */
 	order_control_tt_grad_attn(
-		tt_cores_attnq, tt_cores_attnk, tt_cores_attnv, tt_cores_attnfc, 
-		bias_q, bias_k, bias_v, bias_o, 
-		layernorm_w, layernorm_b, 
-		tt_ranks, attn_shape, 
-		grad_cores_attnq, grad_cores_attnk, grad_cores_attnv, grad_cores_attnfc);
+		tt_cores_attnq, tt_cores_attnk, tt_cores_attnv, tt_cores_attnfc,
+		bias_q, bias_k, bias_v, bias_o,
+		layernorm_w, layernorm_b,
+		tt_ranks, attn_shape);
 	
 	FILE* file1;
 	fopen_s(&file1, "grad_cores_q.txt", "w");
@@ -92,10 +91,10 @@ int main() {
 	FILE* file4;
 	fopen_s(&file4, "grad_cores_fc.txt", "w");
 	for (int i = 0; i < WD * num_cores; i++) {
-		fprintf(file1, "%f, ", grad_cores_attnq[i]);
-		fprintf(file2, "%f, ", grad_cores_attnk[i]);
-		fprintf(file3, "%f, ", grad_cores_attnv[i]);
-		fprintf(file4, "%f, ", grad_cores_attnfc[i]);
+		fprintf(file1, "%f ", grad_cores_attnq[i]);
+		fprintf(file2, "%f ", grad_cores_attnk[i]);
+		fprintf(file3, "%f ", grad_cores_attnv[i]);
+		fprintf(file4, "%f ", grad_cores_attnfc[i]);
 	}
 	fclose(file1);
 	fclose(file2);

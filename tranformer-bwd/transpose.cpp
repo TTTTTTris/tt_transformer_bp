@@ -11,6 +11,7 @@ LOOP_I:
 		LOOP_J :
 		for (int j = 0; j < J; ++j) {
 #pragma HLS loop_tripcount min=10 max=d_model
+#pragma HLS loop_flatten off
 			output[j * I + i] = input[i * J + j]; //IJK->JIK
 		}
 	}
