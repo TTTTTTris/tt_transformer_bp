@@ -8,6 +8,7 @@ void transpose(float* input, float* output, int I, int J) {
 		LOOP_J:
 		for (int j = 0; j < J; ++j) {
 #pragma HLS loop_tripcount min=10 max=d_hidden
+#pragma HLS loop_flatten off
 				output[j * I + i] = input[i * J + j]; //IJK->JIK
 		}
 	}

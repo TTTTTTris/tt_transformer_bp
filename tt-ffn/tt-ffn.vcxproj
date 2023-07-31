@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="contract.cpp" />
-    <ClCompile Include="GELU.cpp" />
     <ClCompile Include="layernorm.cpp" />
     <ClCompile Include="order_control.cpp" />
     <ClCompile Include="test.cpp" />

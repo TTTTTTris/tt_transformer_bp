@@ -8,14 +8,12 @@ void LayerNorm_derivative(float* input, float* grad_in, float* grad_out, const f
     float mean[seq_len]{ 0 };
     float var[seq_len]{ 0 };
     float sigma[seq_len]{ 0 };
-#pragma HLS BIND_STORAGE variable=var impl=bram type=RAM_2P
-#pragma HLS BIND_STORAGE variable=mean impl=bram type=RAM_2P
-#pragma HLS BIND_STORAGE variable=sigma impl=bram type=RAM_2P
     Loop_mean_I :
     for (int i = 0; i < N; i++) {
 #pragma HLS loop_tripcount max=seq_len
         Loop_mean_J :
         for (int j = 0; j < d_model; j++) {
+#pragma HLS loop_flatten off
             mean[i] += input[i * d_model + j];
         }
         mean[i] = mean[i] / (d_model);
@@ -27,14 +25,14 @@ Loop_var_I:
         Loop_var_J :
         for (int j = 0; j < d_model; j++) {
 #pragma HLS pipeline off
-            var[i] += pow(input[i * d_model + j] - mean[i], 2);
+            var[i] += powf(input[i * d_model + j] - mean[i], 2);
         }
         var[i] = var[i] / (d_model);
     }
 Loop_sigma:
     for (int i = 0; i < N; i++) {
 #pragma HLS loop_tripcount max=seq_len
-        sigma[i] = 1.0 / std::sqrt(var[i] + 1e-12);
+        sigma[i] = 1.0 / sqrtf(var[i] + 1e-12);
     }
     // Step 3: Compute the derivatives
     float temp1[seq_len]{ 0 };
@@ -44,6 +42,7 @@ Loop_dLN_I1:
 #pragma HLS loop_tripcount max=seq_len
         Loop_dLN_J1 :
         for (int j = 0; j < d_model; j++) {
+#pragma HLS loop_flatten off
             // Derivative w.r.t. input
             temp1[i] += grad_in[i * d_model + j] * layernorm_w[j];
             temp2[i] += grad_in[i * d_model + j] * (input[i * d_model + j] - mean[i]) * sigma[i] * layernorm_w[j];

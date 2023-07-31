@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GELU.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="layernorm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

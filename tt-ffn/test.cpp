@@ -8,6 +8,8 @@ using namespace std;
 float input[12 * 8 * 8 * Batchsize * seq_len];
 float grad_output[12 * 8 * 8 * Batchsize * seq_len];
 struct S0_type { float* x; };
+float grad_cores_1[num_cores * WD]{ 0 };
+float grad_cores_2[num_cores * WD]{ 0 };
 
 void load_file(float* data, const char* filename, int size) {
 	ifstream file;
@@ -30,8 +32,6 @@ int main() {
 	TYPE_WEIGHT bias_ff2[12 * 8 * 8]{ 0 };
 	TYPE_WEIGHT layernorm_w[12 * 8 * 8]{ 0 };
 	TYPE_WEIGHT layernorm_b[12 * 8 * 8]{ 0 };
-	float grad_cores_1[num_cores * WD]{0};
-	float grad_cores_2[num_cores * WD]{0};
 
 	// define tensor core shapes
 	int pff_core_shape[2][6];
@@ -60,15 +60,16 @@ int main() {
 
 	// order_control_tt_grad(tt_cores_ff1, tt_ranks, pff_shape[0], input, grad_output, grad_cores_ff1);
 	// order_control_tt_grad(tt_cores_ff2, tt_ranks, pff_shape[1], input, grad_output, grad_cores);
-	order_control_top(tt_cores_ff1, tt_cores_ff2, bias_ff1, bias_ff2, layernorm_w, layernorm_b, tt_ranks, pff_shape[0], pff_shape[1],grad_cores_1, grad_cores_2);
+	order_control_top(tt_cores_ff1, tt_cores_ff2, bias_ff1, bias_ff2, layernorm_w, layernorm_b, 
+		tt_ranks, pff_shape[0], pff_shape[1]);
 
 	FILE* file1;
 	fopen_s(&file1, "grad_cores1.txt", "w");
 	FILE* file2;
 	fopen_s(&file2, "grad_cores2.txt", "w");
 	for (int i = 0; i < WD * num_cores; i++) {
-		fprintf(file1, "%f, ", grad_cores_1[i]);
-		fprintf(file2, "%f, ", grad_cores_2[i]);
+		fprintf(file1, "%f ", grad_cores_1[i]);
+		fprintf(file2, "%f ", grad_cores_2[i]);
 	}
 	fclose(file1);
 	fclose(file2);
