@@ -1,0 +1,9 @@
+﻿  test.cpp
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(32,9): warning C4244: “return”: 从“std::streamoff”转换到“int”，可能丢失数据
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(95,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(101,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(108,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(111,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(114,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\tranformer-bwd\test.cpp(117,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  tranformer-bwd.vcxproj -> D:\TRis\senior_revive\Paper\UCSB\HW_SW_Comp\tt_att\x64\Debug\tranformer-bwd.exe

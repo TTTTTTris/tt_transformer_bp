@@ -1,0 +1,5 @@
+transformer-bwd/attn
+transformer-bwd/ffn
+tranformer-bwd/grad_cores_attn/
+tranformer-bwd/grad_cores_ffn/
+tranformer-bwd/inter/
