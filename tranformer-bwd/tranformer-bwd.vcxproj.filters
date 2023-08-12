@@ -30,19 +30,13 @@
     <ClCompile Include="layernorm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GELU.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="softmax.cpp">
+    <ClCompile Include="activation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="contract.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="transpose.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="clear.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,25 +50,16 @@
     <ClInclude Include="order_control.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="matrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="layernorm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="GELU.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="softmax.h">
+    <ClInclude Include="activation.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="contract.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="transpose.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="clear.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">

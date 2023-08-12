@@ -1,6 +1,47 @@
 #include <iostream>
 #include "contract.h"
 
+void clear(
+    float* input,
+    int size
+) {
+LOOP_CLEAR:
+    for (int i = 0; i < size; i++) {
+#pragma HLS loop_tripcount max=10*d_model
+        input[i] = 0;
+    }
+}
+
+void add(
+    float* input1,
+    float* input2,
+    int I
+) {
+LOOP_ADD_I:
+    for (int i = 0; i < I; i++) {
+#pragma HLS loop_tripcount max=seq_len*d_model * Batchsize
+            input1[i] += input2[i];
+    }
+}
+
+void add_b(
+    float* input1,
+    float* input2,
+    int I,
+    int J
+) {
+LOOP_ADD_B_I:
+    for (int i = 0; i < I; i++) {
+#pragma HLS loop_tripcount max=seq_len
+        LOOP_ADD_B_J :
+        for (int j = 0; j < J; j++) {
+#pragma HLS loop_tripcount max=d_model * Batchsize
+#pragma HLS pipeline off
+            input1[i * J + j] += input2[j];
+        }
+    }
+}
+
 void contract(
     float* tensor_l,
     float* tensor_r,

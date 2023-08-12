@@ -127,28 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="clear.cpp" />
     <ClCompile Include="contract.cpp" />
     <ClCompile Include="fc_bwd.cpp" />
-    <ClCompile Include="GELU.cpp" />
+    <ClCompile Include="activation.cpp" />
     <ClCompile Include="order_control.cpp" />
-    <ClCompile Include="softmax.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="matrix.cpp" />
     <ClCompile Include="layernorm.cpp" />
     <ClCompile Include="transpose.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clear.h" />
     <ClInclude Include="contract.h" />
     <ClInclude Include="defines.h" />
     <ClInclude Include="fc_bwd.h" />
-    <ClInclude Include="GELU.h" />
+    <ClInclude Include="activation.h" />
     <ClInclude Include="layernorm.h" />
-    <ClInclude Include="matrix.h" />
     <ClInclude Include="order_control.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="softmax.h" />
     <ClInclude Include="transpose.h" />
   </ItemGroup>
   <ItemGroup>

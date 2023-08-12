@@ -8,12 +8,20 @@ using namespace std;
 float input[12 * 8 * 8 * Batchsize * seq_len]{0};
 float grad_output[12 * 8 * 8 * Batchsize * seq_len]{0};
 struct S0_type { float* x; };
+//TT paras
+int tt_ranks[7]{ 1, 10, 10, 10, 10, 10, 1 };
+int attn_shape[6]{ 12, 8, 8, 8, 8, 12 };
+int pff_shape_0[6]{ 12, 8, 8, 12, 16, 16 };
+int pff_shape_1[6]{ 16, 16, 12, 8, 8, 12 };
+int	pff_shape[2][6] = { {12, 8, 8, 12, 16, 16} ,{16, 16, 12, 8, 8, 12} };
+
 //TYPE_WEIGHT tt_cores_attnq[num_cores * WD_ATTN]{0};
 //TYPE_WEIGHT tt_cores_attnk[num_cores * WD_ATTN]{0};
 //TYPE_WEIGHT tt_cores_attnv[num_cores * WD_ATTN]{0};
 //TYPE_WEIGHT tt_cores_attnfc[num_cores * WD_ATTN]{0};
 //TYPE_WEIGHT tt_cores_ff1[num_cores * WD_FFN]{ 0 };
 //TYPE_WEIGHT tt_cores_ff2[num_cores * WD_FFN]{ 0 };
+//grad-cores
 TYPE_WEIGHT grad_cores_ff1[num_cores * WD_FFN]{ 0 };
 TYPE_WEIGHT grad_cores_ff2[num_cores * WD_FFN]{ 0 };
 TYPE_WEIGHT grad_cores_attnq[num_cores * WD_ATTN]{ 0 };
@@ -50,10 +58,6 @@ void load_file(float* data, const char* filename, int size) {
 }
 
 int main() {
-	int tt_ranks[7] = { 1, 10, 10, 10, 10, 10, 1 }; 
-	int attn_shape[6] = {12, 8, 8, 8, 8, 12};
-	int	pff_shape[2][6] = {{12, 8, 8, 12, 16, 16} ,{16, 16, 12, 8, 8, 12}};
-
 	/* Define FC Layers Cores */
 	TYPE_WEIGHT tt_cores_ff1[num_cores * WD_FFN]{ 0 };
 	TYPE_WEIGHT tt_cores_ff2[num_cores * WD_FFN]{ 0 };
@@ -134,8 +138,8 @@ int main() {
 	order_control_tt_grad_top(
 		tt_cores_attnq, tt_cores_attnk, tt_cores_attnv, tt_cores_attnfc, tt_cores_ff1, tt_cores_ff2,
 		bias_q, bias_k, bias_v, bias_o, bias_ff1, bias_ff2,
-		attn_layernorm_w, attn_layernorm_b, fc_layernorm_w, fc_layernorm_b,
-		tt_ranks, attn_shape, pff_shape[0], pff_shape[1]);
+		attn_layernorm_w, attn_layernorm_b, fc_layernorm_w, fc_layernorm_b);
+		//tt_ranks, attn_shape, pff_shape[0], pff_shape[1]);
 
 	FILE* file1;
 	fopen_s(&file1, "grad_cores_q.txt", "w");

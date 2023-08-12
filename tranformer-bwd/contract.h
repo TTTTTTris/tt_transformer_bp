@@ -2,12 +2,33 @@
 #define CONTRACT
 
 #include "defines.h"
-#include "clear.h"
 
 void clear(
     float* input,
     int size
 );
+
+void add(
+    float* input1,
+    float* input2,
+    int I
+);
+
+void add_b(
+    float* input1,
+    float* input2,
+    int I,
+    int J
+);
+
+void MM(
+    float* matrix1, 
+    float* matrix2, 
+    int M, 
+    float* result, 
+    int I, 
+    int J, 
+    int K);
 
 void contract(
     float* tensor_l,
